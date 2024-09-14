@@ -25,23 +25,61 @@ h1 {
     margin-bottom: 20px;
     color: #333;
 }
+.toko {
+  font-size:30px;
+}
 
 .menu {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 30px;
+}
+
+.menu-item {
+    position: relative;
 }
 
 .menu-item a {
     text-decoration: none;
-    background-color: #007bff;
+    background-color: #000080;
     color: #fff;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 10px; /* Sudut tumpul */
     font-size: 18px;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.menu-item a:active {
+    transform: scale(0.98); /* Interaksi ketika ditekan */
 }
 
 .menu-item a:hover {
-    background-color: #0056b3;
+    /* Hover tetap tidak mengubah warna */
+}
+
+.sub-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.sub-menu a {
+    background-color: #b69574;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.sub-menu a:hover {
+    background-color: #4b3619;
 }
